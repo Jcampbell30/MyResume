@@ -384,6 +384,14 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!--Azure function-->
+  <script>
+  fetch("/api/visitor-log")
+    .then(res => res.json())
+    .then(data => console.log("Visitor logged:", data))
+    .catch(err => console.error("Visitor log failed:", err));
+  </script>
+
 </body>
 
 </html>
